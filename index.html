@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script type="text/javascript" src="scripts/main.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>generator</title>
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="box">
+<h2>KEKW PASS GENERATOR</h2>
+<span style="font-weight: 400;"> </span>
+<input type="text" name="" placeholder="Create Password" id="password" readonly>
+<table>
+  <th><div id="button" class="btn1"onclick="genPassword()">Generate</div></th>
+  <th><a id="button" class="btn2"onclick="copyPassword()">Copy</a></th>
+  <h3>Длина пароля:</h3><h3 id="one"><span id="current"></span></h3>
+  <input type="range" name="" id="len" min="1" max="50" value="0" oninput="liveRange()" onchange="rangeCurr(this.value);">
+</table>
+<input type="checkbox" class="custom" id="checkMy" name="happy" value="yes" onchange="boxCheck()">
+<label for="checkMy">Без @</label>
+<div id="lenght">
+</div>
+<input type="text" name="" id="history" readonly value="">
+</div>
+</body>
+</html>

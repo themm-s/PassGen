@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(98, 0, 255);
+	justify-content: center;
+	align-self: center;
+	display: flex;
+	min-height: 100vh;
+}
+
+.box {
+	background-color: rgb(252, 252, 252);
+	padding-top: 30px;
+	padding: 30px;
+	height: 42em;
+}
+
+.box h2{
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 26px;
+  color: #015a96;
+  font-family: sans-serif;
+}
+
+#password {
+	padding: 20px;
+	user-select: none;
+	height: 50px;
+	width: 400px;
+	border-radius: 6px;
+	border: none;
+	border: 2px solid #8d0cf7;
+	font-size: 22px;
+	outline: none;
+}
+
+#len {
+	user-select: none;
+	height: 50px;
+	width: 400px;
+	border-radius: 6px;
+	border: none;
+	font-size: 22px;
+	outline: none;
+}
+
+#password::placeholder{
+	font-size: 23px;
+}
+
+#button {
+	font-family: sans-serif;
+	font-size: 15px;
+	border: 2px solid #7100cf;
+	width: 155px;
+	height: 50px;
+	margin-top: 1em;
+	text-align: center;
+	background-color: #7100cf;
+	display: flex;
+	color: rgb(255, 255, 255);
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.btn2{
+	margin-left: 85px;
+}
+
+#button:hover {
+	color: white;
+	background-color: black;
+}
+
+#lenght {
+	margin-top: 30px;
+}
+
+h3 {
+	margin-top: 30px;
+}
+
+#lenght {
+	margin-top: 1em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+
+.custom {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.custom+label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+	margin-top: 1em;
+}
+.custom+label::before {
+	content: '';
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border: 1px solid #adb5bd;
+	border-radius: 0.25em;
+	margin-right: 0.5em;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+}
+
+label {
+	font-size: large;
+	font-weight: bolder;
+}
+
+.custom:checked+label::before {
+	border-color: #0b76ef;
+	background-color: #0b76ef;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* при наведении курсора на checkbox */
+.custom:not(:disabled):not(:checked)+label:hover::before {
+	border-color: #b3d7ff;
+}
+  /* стили для активного состояния чекбокса (при нажатии на него) */
+.custom:not(:disabled):active+label::before {
+	background-color: #b3d7ff;
+	border-color: #b3d7ff;
+}
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom:focus:not(:checked)+label::before {
+	border-color: #80bdff;
+}
+  /* стили для чекбокса, находящегося в состоянии disabled */
+.custom:disabled+label::before {
+	background-color: #e9ecef;
+}
+#one {
+	margin-top: -21px;
+	margin-left: 7em;
+	position: fixed;
+}
+#history {
+	height: 250px;
+	width: 100%;
+	padding-bottom: 220px;
+}
