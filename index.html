@@ -1,33 +1,109 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles/styles.css">
   <script type="text/javascript" src="scripts/main.js"></script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>generator</title>
-  <script
-  src="https://code.jquery.com/jquery-3.6.1.min.js"
-  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-  crossorigin="anonymous"></script>
+  <title>gen</title>
 </head>
+
 <body>
   <div class="box">
-<h2>KEKW PASS GENERATOR</h2>
-<span style="font-weight: 400;"> </span>
-<input type="text" name="" placeholder="Create Password" id="password" readonly>
-<table>
-  <th><div id="button" class="btn1"onclick="genPassword()">Generate</div></th>
-  <th><a id="button" class="btn2"onclick="copyPassword()">Copy</a></th>
-  <h3>Длина пароля:</h3><h3 id="one"><span id="current"></span></h3>
-  <input type="range" name="" id="len" min="1" max="50" value="0" oninput="liveRange()" onchange="rangeCurr(this.value);">
-</table>
-<input type="checkbox" class="custom" id="checkMy" name="happy" value="yes" onchange="boxCheck()">
-<label for="checkMy">Без @</label>
-<div id="lenght">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img1.jpg" style="width:1000px;" >
+        <div class="text">Фото 1</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img2.jpg" style="width:100%;" >
+        <div class="text">Фото 2</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img3.jpg" style="width:100%;" >
+        <div class="text">Фото 3</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <div class="inbox">
+    <div class="dropdown">
+      <button onclick="dropDown()" class="dropbtn">Тык</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#">Тыкабельно</a>
+        <a href="#">Тыкабельно</a>
+        <a href="#">Тыкабельно</a>
+      </div>
+    </div>
+    <h2>PASS GEN</h2>
+    <span style="font-weight: 400;"> </span>
+    <input type="text" name="" placeholder="Create Password" id="password" readonly>
+    <table>
+      <th>
+        <div id="button" class="btn1" onclick="genPassword()">Generate</div>
+      </th>
+      <th><a id="button" class="btn2" onclick="copyPassword()">Copy</a></th>
+      <h3>Длина пароля:</h3>
+      <h3 id="one">1<span id="current"></span></h3>
+      <input type="range" name="" id="len" min="1" max="30" value="0" oninput="liveRange()">
+    </table>
+    <div class="inplab">
+    <input type="checkbox" class="custom" id="checkMy" name="happy" value="yes" onchange="boxCheck()">
+    <label for="checkMy">Без @</label>
+  </div>
+    <div id="lenght">
+    </div>
+    <br>
+    <div class="buttons">
+      <br><button id="clear-history">Clear history</button>
+      <br>
+    </div>
+    <div class="history">
+    </div>
+    <h3 id="maxHistory"></h3>
+  </div>
 </div>
-<input type="text" name="" id="history" readonly value="">
-</div>
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex +=n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n)
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName('mySlides');
+  let dots = document.getElementsByClassName('dot');
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += ' active';
+}
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
+
 </html>
